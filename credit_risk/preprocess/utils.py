@@ -18,13 +18,13 @@ def timer(title):
 
 def get_bucket_prefix():
     return (
-        "s3://bedrock-sample/" if getenv("ENV_TYPE") == "aws" else "gs://bedrock-sample/"
+        "gs://bedrock-sample/" if getenv("ENV_TYPE") == "gcp_sandbox" else "gs://bedrock-sample/"
     )
 
 
 def get_temp_bucket_prefix():
     return (
-        "s3://span-production-temp-data/" if getenv("ENV_TYPE") == "aws" else "gs://span-temp-production/"
+        "gs://bdrk-sandbox-gcp-data/" if getenv("ENV_TYPE") == "gcp_sandbox" else "gs://span-temp-production/"
     )
 
 
